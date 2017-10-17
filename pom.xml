@@ -7,6 +7,9 @@
 	<profiles>
 		<profile>
 			<id>reservation</id>
+			<activation>
+              <activeByDefault>true</activeByDefault>
+            </activation>
 			<build>
 				<plugins>
 		            <plugin>
@@ -32,7 +35,7 @@
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
+	</profiles> 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
