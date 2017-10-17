@@ -8,7 +8,7 @@ public class OlsankaRezervace {
 	private static String URL = "http://olsanka.e-rezervace.cz";
 	By usernameInput = By.id("username");
 	By passwordInput = By.id("password");
-	By loginBtn = By.cssSelector("input[value='Pøihlásit']");
+	By loginBtn = By.cssSelector("input[value='PÅ™ihlÃ¡sit']");
 	By gridTypeSelectBox = By.id("scheduleNavigForm");
 	By weekGridTypeFromSelectBox = By.cssSelector("option[value='horizontal_service_week']");
 	By logoutBtn = By.cssSelector("input[id='logged_user_header_form:j_id202']");
