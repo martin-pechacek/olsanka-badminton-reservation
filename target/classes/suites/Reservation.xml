@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Court Reservation" verbose="2" thread-count="3" parallel="none">
+  
+  <!-- Example suite -->
+  
+  <test name="Reservation" >
+	  <classes>
+	      <class name="logic.Reservation"/>
+	  </classes>
+  </test>
+  
+</suite> <!-- Default suite -->
