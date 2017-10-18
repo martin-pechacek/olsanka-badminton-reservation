@@ -31,9 +31,9 @@ public class Reservation {
 	    	System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_LINUX);
 	    }
 		
-//		driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		
-		driver = new FirefoxDriver();
+//		driver = new FirefoxDriver();
 		
 		olsankaRezervace = new OlsankaRezervace();
 		
