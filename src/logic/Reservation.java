@@ -36,16 +36,13 @@ public class Reservation {
 			driver = new ChromeDriver();
 	    }
 		
-		
-		driver = new ChromeDriver();
-		
 		olsankaRezervace = new OlsankaRezervace();
 		
 		driver.get(olsankaRezervace.getUrl());
 	}
 	
 	@Test(priority=0)
-	public void login() {
+	public void login() throws InterruptedException {
 		WebElement usernameInput = driver.findElement(olsankaRezervace.getUsernameInput()); 
 		usernameInput.sendKeys("mpechacek");
 	 
@@ -54,6 +51,8 @@ public class Reservation {
 	 
 		WebElement submitBtn = driver.findElement(olsankaRezervace.getLoginButton());
 		submitBtn.click();	 
+		
+		Thread.sleep(2000);
 	}
 	
 	@Test(priority=1)
@@ -83,17 +82,28 @@ public class Reservation {
 	}
 	
 	private void reserveCourt() throws InterruptedException{
-		//tuesday, court 4, 18:00
-		WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(1, 5, 13));
-		cell.click();
 		
-		Thread.sleep(2000);
-		
-		driver.switchTo().activeElement();
-		WebElement reserveButton = driver.findElement(olsankaRezervace.getReserveButton());
-		reserveButton.click();
-		
-		Thread.sleep(2000);
+		for(int i=5; i>1; i--){
+		    try {
+				//tuesday, court 4(3,2,1 depends on i and if court is occupied), 18:00
+     			WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(1, i, 13));
+				cell.click();
+				
+				Thread.sleep(2000);
+				
+				driver.switchTo().activeElement();
+		    	
+		    	WebElement reserveButton = driver.findElement(olsankaRezervace.getReserveButton());
+				reserveButton.click();
+				
+				Thread.sleep(2000);
+				
+				break;
+		    } catch (org.openqa.selenium.WebDriverException e) {
+		    	System.out.println(e.getMessage());
+		    	System.out.println("Court occupied");	
+		    }			
+		}		
 	}
 	
 	@Test(priority=3)
