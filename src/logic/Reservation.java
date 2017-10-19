@@ -83,9 +83,8 @@ public class Reservation {
 	}
 	
 	private void reserveCourt() throws InterruptedException{
-		//thursday, court 4, 19	:00
-		//WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(2, 5, 14));
-		WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(3, 5, 16));
+		//tuesday, court 4, 18:00
+		WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(1, 5, 13));
 		cell.click();
 		
 		Thread.sleep(2000);
