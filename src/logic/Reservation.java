@@ -30,10 +30,11 @@ public class Reservation {
 	    } else {
 	    	System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_LINUX);
 	    }
+		//Workaround for google chrome bug(cannot maximalize window) on linux
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
 		
-		driver = new ChromeDriver();
-		
-//		driver = new FirefoxDriver();
+		driver = new ChromeDriver(options);
 		
 		olsankaRezervace = new OlsankaRezervace();
 		
