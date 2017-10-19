@@ -5,7 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -28,19 +27,21 @@ public class Reservation {
 		String system = System.getProperty("os.name");
 		if(system.toLowerCase().contains("windows")){
 	    	System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_WIN);
+			//must be here, because of google-chrome bug(cannot maximalize window) on linux - workaround
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 	    } else {
 	    	System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_LINUX);
+			//must be here, because of google-chrome bug(cannot maximalize window) on linux - workaround
+			driver = new ChromeDriver();
 	    }
-		//Workaround for google chrome bug(cannot maximalize window) on linux
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--start-maximized");
 		
-		driver = new ChromeDriver(options);
+		
+		driver = new ChromeDriver();
 		
 		olsankaRezervace = new OlsankaRezervace();
 		
 		driver.get(olsankaRezervace.getUrl());
-		driver.manage().window().maximize();
 	}
 	
 	@Test(priority=0)
