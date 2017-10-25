@@ -87,7 +87,7 @@ public class Reservation {
 		    try {
 				//Thursday, court 4(3,2,1 depends on i and if court is occupied), 18:00
      			//WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(3, i, 13));
-				WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(3, i, 10));
+				WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(2, i, 10));
 				cell.click();
 				
 				Thread.sleep(2000);
