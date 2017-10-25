@@ -67,7 +67,7 @@ public class Reservation {
 	@Test(priority=2)
 	public void findFreeCourt() throws InterruptedException{
 		WebDriverWait wait = new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@id='schedule_0']/tbody/tr[2]/td[13]")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@id='schedule_0']/tbody/tr[2]/td[13)));
 		
 		for(int i = 0; i<3;i++){	
 			WebElement nextWeekArrow = driver.findElement(olsankaRezervace.getNextWeekArrow());
@@ -86,7 +86,8 @@ public class Reservation {
 		for(int i=5; i>1; i--){
 		    try {
 				//Thursday, court 4(3,2,1 depends on i and if court is occupied), 18:00
-     			WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(3, i, 13));
+     			//WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(3, i, 13));
+				WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(3, i, 10));
 				cell.click();
 				
 				Thread.sleep(2000);
