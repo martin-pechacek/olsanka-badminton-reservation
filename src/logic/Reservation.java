@@ -67,7 +67,7 @@ public class Reservation {
 	@Test(priority=2)
 	public void findFreeCourt() throws InterruptedException{
 		WebDriverWait wait = new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@id='schedule_0']/tbody/tr[2]/td[13)"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@id='schedule_0']/tbody/tr[2]/td[13)")));
 		
 		for(int i = 0; i<3;i++){	
 			WebElement nextWeekArrow = driver.findElement(olsankaRezervace.getNextWeekArrow());
