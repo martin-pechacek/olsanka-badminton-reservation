@@ -10,12 +10,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import pages.OlsankaRezervace;
 
 
 public class Reservation {
     WebDriver driver;
+    WebDriverWait wait;
 	String DRIVER_PATH = "";
 	private static final String CHROME_DRIVER_WIN = "src//utility//chromedriver.exe";
 	private static final String CHROME_DRIVER_LINUX = "//usr//local//bin//chromedriver";
@@ -36,6 +36,8 @@ public class Reservation {
 			driver = new ChromeDriver();
 	    }
 		
+		wait = new WebDriverWait(driver,5);
+		
 		olsankaRezervace = new OlsankaRezervace();
 		
 		driver.get(olsankaRezervace.getUrl());
@@ -52,7 +54,9 @@ public class Reservation {
 		WebElement submitBtn = driver.findElement(olsankaRezervace.getLoginButton());
 		submitBtn.click();	 
 		
-		Thread.sleep(2000);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(olsankaRezervace.getLogoutButton()));
+		
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority=1)
@@ -86,7 +90,9 @@ public class Reservation {
 		for(int i=5; i>1; i--){
 		    try {
 				//Thursday, court 4(3,2,1 depends on i and if court is occupied), 18:00
-     			WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(3, i, 13));
+  //   			WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(3, i, 13));
+				//Thursday, court 4(3,2,1 depends on i and if court is occupied), 18:00
+     			WebElement cell = driver.findElement(olsankaRezervace.getReservationTableRow(4, i, 13));
 				cell.click();
 				
 				Thread.sleep(2000);
