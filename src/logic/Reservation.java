@@ -18,7 +18,7 @@ public class Reservation {
     WebDriverWait wait;
 	String DRIVER_PATH = "";
 	private static final String CHROME_DRIVER_WIN = "src//utility//chromedriver.exe";
-	private static final String CHROME_DRIVER_LINUX = "//usr//local//bin//chromedriver";
+	private static final String CHROME_DRIVER_LINUX = "//usr//local//bin//geckodriver";
 	private OlsankaRezervace olsankaRezervace;
 	
 	
