@@ -5,6 +5,8 @@
     <classes>
       <class name="logic.Reservation">
         <methods>
+          <include name="findFreeCourt"/>
+          <include name="getWeeklyGrid"/>
           <include name="logout"/>
           <include name="setup"/>
           <include name="login"/>
