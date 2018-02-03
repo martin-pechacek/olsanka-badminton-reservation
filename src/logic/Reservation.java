@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,11 +34,11 @@ public class Reservation {
 			driver.manage().window().maximize();
 	    } else {
 			//must be here, because of google-chrome bug(cannot maximalize window) on linux - workaround
-			System.setProperty("webdriver.chrome.driver", FF_DRIVER_LINUX);
+			System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_LINUX);
 			ChromeOptions options = new ChromeOptions();
             options.addArguments("headless");
             options.addArguments("window-size=1024x768");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 	    }		
 		wait = new WebDriverWait(driver,5);
 		
