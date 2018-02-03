@@ -31,11 +31,11 @@ public class Reservation {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 	    } else {
+			driver = new FirefoxDriver();
 	    	System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_LINUX);
 			//must be here, because of google-chrome bug(cannot maximalize window) on linux - workaround
-			driver = new ChromeDriver();
-	    }
-		
+			
+	    }		
 		wait = new WebDriverWait(driver,5);
 		
 		olsankaRezervace = new OlsankaRezervace();
