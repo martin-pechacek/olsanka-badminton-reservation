@@ -31,8 +31,8 @@ public class Reservation {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 	    } else {
+		    System.setProperty("webdriver.gecko.driver", FF_DRIVER_LINUX);
 			driver = new FirefoxDriver();
-	    	System.setProperty("webdriver.gecko.driver", FF_DRIVER_LINUX);
 			//must be here, because of google-chrome bug(cannot maximalize window) on linux - workaround
 			
 	    }		
