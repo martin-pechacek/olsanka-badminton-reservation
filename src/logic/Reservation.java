@@ -19,7 +19,7 @@ public class Reservation {
     WebDriverWait wait;
 	String DRIVER_PATH = "";
 	private static final String CHROME_DRIVER_WIN = "src//utility//chromedriver.exe";
-	private static final String FF_DRIVER_LINUX = "//usr//local//bin//geckodriver";
+	private static final String CHROME_DRIVER_LINUX = "//usr//local//bin//chromedriver";
 	private OlsankaRezervace olsankaRezervace;
 	
 	
@@ -32,10 +32,9 @@ public class Reservation {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 	    } else {
-		    System.setProperty("webdriver.gecko.driver", FF_DRIVER_LINUX);
-			driver = new FirefoxDriver();
 			//must be here, because of google-chrome bug(cannot maximalize window) on linux - workaround
-			
+			System.setProperty("webdriver.chrome.driver", FF_DRIVER_LINUX);
+			driver = new ChromeDriver();
 	    }		
 		wait = new WebDriverWait(driver,5);
 		
