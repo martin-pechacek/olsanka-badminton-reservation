@@ -34,6 +34,9 @@ public class Reservation {
 	    } else {
 			//must be here, because of google-chrome bug(cannot maximalize window) on linux - workaround
 			System.setProperty("webdriver.chrome.driver", FF_DRIVER_LINUX);
+			ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            options.addArguments("window-size=1024x768");
 			driver = new ChromeDriver();
 	    }		
 		wait = new WebDriverWait(driver,5);
