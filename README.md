@@ -26,7 +26,7 @@ Application for badminton court reservation in [Sportovní centrum Olšanka](http:
 - time = Time in 24h format you want to reserve court on, eg. 18:00
 - weeksAhead = how many weeks ahead you want to reserve court (0 is actual week)
 
-  ***There are three possibilities how to set parameters:***
+  **There are three possibilities how to set parameters:**
 
   ***1.1. Maven command for running test***
   ```{r, engine='sh'}
