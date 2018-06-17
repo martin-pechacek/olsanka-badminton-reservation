@@ -12,9 +12,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import common.Common;
 import pages.BadmintonReservationPage;
 import pages.OverviewPage;
+import common.Common;
 
 public class ReservationTest {
 	private static WebDriver driver;
