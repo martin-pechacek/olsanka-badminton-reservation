@@ -1,5 +1,5 @@
 # Olsanka badminton - Reservation
-Application for badminton court reservation in [Sportovní centrum Olšanka](http://olsanka.e-rezervace.cz) built on [Selenium WebDriver](http://www.seleniumhq.org/) and [JUnit 5] https://junit.org/junit5/
+Application for badminton court reservation in [Sportovní centrum Olšanka](http://olsanka.e-rezervace.cz) built on [Selenium WebDriver](http://www.seleniumhq.org/) and [JUnit 5](https://junit.org/junit5/)
 
 ## Installation
 
@@ -30,7 +30,12 @@ Application for badminton court reservation in [Sportovní centrum Olšanka](http:
 
   ***1.1. Maven command for running test***
   ```{r, engine='sh'}
-  mvn -Dreservation.username=\YOUR_USERNAME\ -Dreservation.password=\YOUR_PASSWORD\ -Dreservation.scheduleView=\SCHEDULE_VIEW\ -Dreservation.day=\DAY\ -Dreservation.time=\TIME\ -Dreservation.weeksAhead=\WEEKS_AHEAD\ clean test
+  mvn -Dreservation.username=\YOUR_USERNAME\ 
+      -Dreservation.password=\YOUR_PASSWORD\ 
+      -Dreservation.scheduleView=\SCHEDULE_VIEW\ 
+      -Dreservation.day=\DAY\ -Dreservation.time=\TIME\ 
+      -Dreservation.weeksAhead=\WEEKS_AHEAD\
+      clean test
   ```
 
   ***1.2. Directly in _POM.xml_ file***
@@ -59,6 +64,7 @@ Application for badminton court reservation in [Sportovní centrum Olšanka](http:
   String weeksAheadStr = "\WEEKS_AHEAD\";
 
   ```
+
 **2. Run test**
 ```{r, engine='sh'}
 run cmd
