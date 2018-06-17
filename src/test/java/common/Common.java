@@ -3,7 +3,7 @@ package common;
 public class Common {
     
 	private static final String CHROME_DRIVER_WIN = "src//test//resources//chromedriver.exe";
-	private static final String CHROME_DRIVER_LINUX = "src//test//resources//chromedriver";
+	private static final String CHROME_DRIVER_LINUX = "//usr//local//bin//chromedriver";
 	
 	/**
 	 *  Method for setting system property - driver paths
