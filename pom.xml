@@ -4,7 +4,7 @@
   <artifactId>Olsanka_Badminton-Rezervace</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Olsanka Badminton - Rezervace</name>
-  <properties>
+  <properties>  
 	 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	 <java.version>1.8</java.version>
 	 <maven-compiler.version>3.7.0</maven-compiler.version>
@@ -30,6 +30,16 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${surefire.version}</version>
+        <configuration>
+          <systemProperties>
+            <reservation.username></reservation.username>
+            <reservation.password></reservation.password>
+            <reservation.scheduleView></reservation.scheduleView>
+            <reservation.day></reservation.day>
+  		    <reservation.time></reservation.time>
+  		    <reservation.weeksAhead></reservation.weeksAhead>
+          </systemProperties>
+        </configuration>
         <dependencies>
           <dependency>
             <groupId>org.junit.platform</groupId>

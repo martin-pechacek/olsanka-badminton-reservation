@@ -38,7 +38,7 @@ public class ReservationTest {
 	 * 
 	 */
 	@BeforeEach
-	public void setUp() {
+	public void setUp() {		
 		String system = System.getProperty("os.name");
 		if(system.toLowerCase().contains("windows")){
 			driver = new ChromeDriver();
@@ -66,11 +66,13 @@ public class ReservationTest {
 	
 	@Test
 	public void ReserveCourt() throws InterruptedException {
-		String username = "mpechacek";
-		String password = "Smetak01";
-		String scheduleView = "Týden";
-		String day = "Thursday";
-		String time = "18:00";
+		String username = Common.getTestSettingFromPOMFile("username");
+		String password = Common.getTestSettingFromPOMFile("password");
+		String scheduleView = Common.getTestSettingFromPOMFile("scheduleView");
+		String day = Common.getTestSettingFromPOMFile("day");
+		String time = Common.getTestSettingFromPOMFile("time");
+		String weeksAheadStr = Common.getTestSettingFromPOMFile("weeksAhead");
+		int weeksAhead = Integer.parseInt(weeksAheadStr);
 		
 		overviewPage = PageFactory.initElements(driver, OverviewPage.class);	
 		
@@ -86,7 +88,7 @@ public class ReservationTest {
 		
 		assertTrue(firstDayInSchedule.contains("Po"), "For week view should be first day Monday but was " + firstDayInSchedule);
 		
-		badmintonReservationPage.navigateForward(3);
+		badmintonReservationPage.navigateForward(weeksAhead);
 		
 		badmintonReservationPage.reserveCourt(day, time);
 		

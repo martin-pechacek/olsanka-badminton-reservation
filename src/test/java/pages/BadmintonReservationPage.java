@@ -132,7 +132,7 @@ public class BadmintonReservationPage {
 		    } catch (org.openqa.selenium.WebDriverException e) {
 		    	System.out.println(e.getMessage());
 		    	System.out.println("=====================");
-		    	System.out.println("Court occupied");	
+		    	System.out.println("Court " + (i-1) + " occupied");	
 		    	System.out.println("=====================");
 		    }			
 		}		
@@ -161,26 +161,28 @@ public class BadmintonReservationPage {
 	private int getDayNumber(String day){
 		int dayNumber = 10000000;
 		
+		day = day.toLowerCase();
+		
 		switch(day){
-			case "Monday":
+			case "monday":
 				dayNumber = 0;
 				break;
-			case "Tuesday":
+			case "tuesday":
 				dayNumber = 1;
 				break;
-			case "Wednesday":
+			case "wednesday":
 				dayNumber = 2;
 				break;
-			case "Thursday":
+			case "thursday":
 				dayNumber = 3;
 				break;
-			case "Friday":
+			case "friday":
 				dayNumber = 4;
 				break;
-			case "Saturday":
+			case "saturday":
 				dayNumber = 5;
 				break;
-			case "Sunday":
+			case "sunday":
 				dayNumber = 6;
 				break;
 		}

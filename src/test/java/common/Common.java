@@ -17,4 +17,16 @@ public class Common {
 			System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_LINUX);
 	    }
 	}
+	
+	/**
+	 * Returns value of reservation property set by maven
+	 * 
+	 * @param property type (time, day, weeksAhead)
+	 * @return property value set by maven
+	 */
+	public static String getTestSettingFromPOMFile(String property){
+		String propertyValue = System.getProperty("reservation." + property);
+		
+		return propertyValue;
+	}
 }
