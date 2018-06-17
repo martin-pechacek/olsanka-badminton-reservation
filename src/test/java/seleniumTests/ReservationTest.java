@@ -48,7 +48,7 @@ public class ReservationTest {
 			ChromeOptions options = new ChromeOptions();
             options.addArguments("headless");
             options.addArguments("window-size=1024x768");
-            
+           
 			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 	    }
@@ -92,17 +92,4 @@ public class ReservationTest {
 		
 		overviewPage.logout();
 	}
-	
-/*	
-	@BeforeTest
-	public void setup() {
-		
-		wait = new WebDriverWait(driver,5);
-		
-		olsankaRezervace = new OlsankaRezervace();
-		
-		driver.get(olsankaRezervace.getUrl());
-	}
-	
-	*/
 }

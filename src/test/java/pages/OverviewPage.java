@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OverviewPage {
 	
-	
 	private final WebDriver driver;
 	private static WebDriverWait wait;
 	
@@ -33,18 +32,6 @@ public class OverviewPage {
 	
 	@FindBy(css="a.my_reservations_menu")
 	static WebElement myReservationsBtn;
-	
-/*	
-	
-	@FindBy(css="option[value='horizontal_service_week']")
-	static WebElement weekGridTypeFromSelectBox;
-	
-	@FindBy(xpath="//div[@id='mp_reservationHeader']/div")
-	static WebElement reservationModalTitle;
-	
-
-	
-*/
 	
 	/**
 	 * Class constructor
