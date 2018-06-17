@@ -45,10 +45,11 @@ public class ReservationTest {
 			driver.manage().window().maximize();
 	    } else {
 			//must be here, because of google-chrome bug(cannot maximalize window) on linux - workaround
-//			ChromeOptions options = new ChromeOptions();
-  //          options.addArguments("headless");
-    //        options.addArguments("window-size=1024x768");
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            options.addArguments("window-size=1024x768");
+            
+			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 	    }
 	}
