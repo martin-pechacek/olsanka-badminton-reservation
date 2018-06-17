@@ -18,7 +18,7 @@ Application for badminton court reservation in [Sportovní centrum Olšanka](http:
 - Download and set [Maven](https://www.mkyong.com/maven/how-to-install-maven-in-windows/)
 
 ## Usage
-**1. Set your reservation (test) parameters: (login - username and password, scheduleView, day, time, weeksAhead)**
+1. Set your reservation (test) parameters: (login - username and password, scheduleView, day, time, weeksAhead)
 - username = your login username
 - password = your login password
 - scheduleView = type of schedule grid view (Týdnì (Weekly), Jeden den (One day), etc.)
