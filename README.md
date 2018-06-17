@@ -19,12 +19,12 @@ Application for badminton court reservation in [Sportovní centrum Olšanka](http:
 
 ## Usage
 **1. Set your reservation (test) parameters: (login - username and password, scheduleView, day, time, weeksAhead)**
-  - username = your login username
-  - password = your login password
-  - scheduleView = type of schedule grid view (Týdnì (Weekly), Jeden den (One day), etc.)
-  - day = Day you want to reserve court on, eg. Thursday
-  - time = Time in 24h format you want to reserve court on, eg. 18:00
-  - weeksAhead = how many weeks ahead you want to reserve court (0 is actual week)
+- username = your login username
+- password = your login password
+- scheduleView = type of schedule grid view (Týdnì (Weekly), Jeden den (One day), etc.)
+- day = Day you want to reserve court on, eg. Thursday
+- time = Time in 24h format you want to reserve court on, eg. 18:00
+- weeksAhead = how many weeks ahead you want to reserve court (0 is actual week)
 
   ***There are three possibilities how to set parameters:***
 
