@@ -1,9 +1,9 @@
 # Olsanka badminton - Reservation
-Application for badminton court reservation in [Sportovní centrum Olšanka](http://olsanka.e-rezervace.cz) built on [Selenium WebDriver](http://www.seleniumhq.org/) and [JUnit 5](https://junit.org/junit5/)
+Application for badminton court reservation in [SportovnÃ­ centrum OlÅ¡anka](http://olsanka.e-rezervace.cz) built on [Selenium WebDriver](http://www.seleniumhq.org/) and [JUnit 5](https://junit.org/junit5/)
 
 ## Installation
 
-### Prerequisites for developing
+### Prerequisites for development
 - Install IDE, eg. [Eclipse](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R/eclipse-inst-win64.exe)
 - Install [Google Chrome](https://www.google.com/chrome/)
 - Download [Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/downloads) unzip to folder and set the folder's path in your system path
@@ -21,7 +21,7 @@ Application for badminton court reservation in [Sportovní centrum Olšanka](http:
 **1. Set your reservation (test) parameters:**
 - username = your login username
 - password = your login password
-- scheduleView = type of schedule grid view (Týdnì (Weekly), Jeden den (One day), etc.)
+- scheduleView = type of schedule grid view (TÃ½dnÃ¬ (Weekly), Jeden den (One day), etc.)
 - day = Day you want to reserve court on, eg. Thursday
 - time = Time in 24h format you want to reserve court on, eg. 18:00
 - weeksAhead = how many weeks ahead you want to reserve court (0 is actual week)
